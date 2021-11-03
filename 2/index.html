@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>primo o no, par o impar</title>
+</head>
+<body>
+    <p>Da click en el boton para que escribas tu numero.</p>
+    <p>De esa manera podras saber si tu numero es par o impar y primo o no primo.</p>
+    <button onclick="numero()">Click</button>
+    <p id="rtav"></p>
+    <p id="rtaf"></p>
+    <p id="rtap"></p>
+    <p id="rtanp"></p>
+    <script>
+        function numero() {
+            let numeros = prompt("Porfavor escriba un numero", "");
+            impar = "Es un numero IMPAR"
+            par = "Es un numero PAR"
+            if (numeros % 2 == 0) {
+                document.getElementById("rtav").innerHTML= numeros+" "+par
+            }
+            else {
+                document.getElementById("rtaf").innerHTML= numeros+" "+impar
+            }
+            for (let i = 2; i < numeros; i++) {
+                let correcto = numeros % i
+                if (correcto == 0) {
+                    document.getElementById("rtanp").innerHTML= numeros+" "+"NO es un numero PRIMO"
+                    let correcto = correcto - 10
+                }
+                else {
+                    if (0 < correcto) {
+                    document.getElementById("rtap").innerHTML= numeros+" "+"Es un numero PRIMO"
+                }
+                }
+            }
+        }
+    </script>
+    
+</body>
+</html>

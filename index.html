@@ -1,0 +1,26 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palindromo</title>
+</head>
+<body>
+    <script src="loops.js"></script>
+    <div class="contenedor">
+        <div id="titulo">Palíndromos</div>
+        <div id="info">
+            <p>Definir una función que determine si la cadena de texto que el usuario escribe es un palíndromo, es decir, si se lee de la misma forma desde la izquierda y desde la derecha.</p>
+            <p>Ejemplos: "La ruta nos aporto otro paso natural".</p>
+            <p>¡Ojo!: NO escribas acentos ni signos de puntuación. (no lo he implementado en JS).</p>
+        </div>
+        <label for="dato">Escribe una frase:</label>
+        <textarea id="dato" onfocus="this.select();">Odio la luz azul al oido</textarea>
+        <br>
+        <button onclick="Palindromo();" class="boton rojo">Verificar Palíndromo</button>
+
+        <div id="resultado"></div>
+    </div>
+    
+</body>
+</html>
